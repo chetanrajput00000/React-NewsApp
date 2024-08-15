@@ -91,7 +91,7 @@ const News = (props)=>{
     }
 
     useEffect(() => {
-        document.title = `${capitalizeFirstLetter(props.category)} - News-69`;
+        document.title = `${capitalizeFirstLetter(props.category)} - Current Affairs`;
         updateNews(); 
     }, [])
 
@@ -107,7 +107,7 @@ const News = (props)=>{
 
     return (
         <>
-            <h1 className='text-center' style={{ margin: "30px 0px",marginTop:"88px" }}><b>NEWS-69 </b>Top {capitalizeFirstLetter(props.category)} Headlines</h1>
+            <h1 className='text-center' style={{ margin: "30px 0px",marginTop:"88px" }}><b>Current Affairs </b>Top {capitalizeFirstLetter(props.category)} News</h1>
             {loading && <Spinner />}
             <InfiniteScroll
                 dataLength={articles.length}
